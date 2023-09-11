@@ -7,10 +7,17 @@
       const latin = "abcdefghijklmnopqrstuvwxyz0123456789".split(""); 
       const alphabet = "ИΛԺ+OΡ⋲Z<K6⁁ϙᒣQVL⩘H↾Nμ⋊SΒ△⊣|23⌒ᕊCΠ9ɥ".split(""); 
       function latinToMuffin(text) {
-        let textArray = text.split(""); 
-        textArray.map((char) => latin.indexOf(char.toLowerCase()) != -1 ? alphabet[latin.indexOf(char.toLowerCase())] : char); 
-        return textArray.join("");
+        return text.split("").map((char) => latin.indexOf(char.toLowerCase()) != -1 ? alphabet[latin.indexOf(char.toLowerCase())] : char).join("");
+      }
+      function muffinToLatin(text) {
+        return text.split("").map((char) => alphabet.indexOf(char) != -1 ? latin[alphabet.indexOf(char)] : char).join("");
+      }
+
+      function stuff() {
+        document.getElementById("output").innerText = latinToMuffin(document.getElementById("input").value);
       }
     </script>
+    <input type="text" id="input" onchange="stuff()" />
+    <p id="output"></p>
   </body>
 </html>
