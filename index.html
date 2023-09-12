@@ -16,9 +16,18 @@
       function stuff() {
         document.getElementById("output").innerText = latinToMuffin(document.getElementById("input").value);
       }
+
+      function stuff2() {
+        document.getElementById("output2").innerText = muffinToLatin(document.getElementById("input2").value);
+      }
     </script>
     <input type="text" id="input" onchange="stuff()" />
     <br><br>
     <p id="output"></p>
+    <br><br>
+     <input type="text" id="input2" onchange="stuff2()" />
+    <br><br>
+    <p id="output2"></p>
+    <br><br>
   </body>
 </html>
