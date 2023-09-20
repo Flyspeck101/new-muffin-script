@@ -5,7 +5,7 @@
   <body>
     <script>
       const latin = "abcdefghijklmnopqrstuvwxyz0123456789".split(""); 
-      const alphabet = "ИΛԺ+OΡ⋲Z<K6⁁ϙᒣQVL⩘H↾Nμ⋊SΒ△⊣|23⌒ᕊCΠ9ɥ".split(""); 
+      const alphabet = "ИΛԺ+OP⋲Z<K6ʎϙᒣQVL⩘h↾Nμ⋊Sβ△⊣|23⌒ᕊCΠ9ɥ".split(""); 
       function latinToMuffin(text) {
         return text.split("").map((char) => latin.indexOf(char.toLowerCase()) != -1 ? alphabet[latin.indexOf(char.toLowerCase())] : char).join("");
       }
